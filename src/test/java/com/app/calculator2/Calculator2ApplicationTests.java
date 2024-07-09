@@ -24,7 +24,7 @@ class Calculator2ApplicationTests {
 
     @Test
     void testSubtract() {
-        assertEquals(1, calculatorService.subtract(3, 2));
+        assertEquals(2, calculatorService.subtract(4, 2));
     }
 
     @Test
