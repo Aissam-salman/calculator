@@ -49,7 +49,6 @@ pipeline {
                 sshagent(['my-ssh-key']) {
                     sh """
                     scp -o StrictHostKeyChecking=no ${ARTIFACT_PATH} ${EC2_USER}@${EC2_HOST}:${REMOTE_PATH}
-                    ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} 'java -jar ${REMOTE_PATH}calculator2-0.0.1-SNAPSHOT.jar &'
                     """
                 }
             }
