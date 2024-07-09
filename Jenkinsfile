@@ -49,6 +49,7 @@ pipeline {
                 sshagent(['my-ssh-key']) {
                     sh """
                     scp -o StrictHostKeyChecking=no ${ARTIFACT_PATH} ${EC2_USER}@${EC2_HOST}:${REMOTE_PATH}
+                    ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} 'sudo systemctl restart springboot.service'
                     """
                 }
             }
