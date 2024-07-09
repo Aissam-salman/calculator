@@ -19,7 +19,7 @@ class Calculator2ApplicationTests {
 
     @Test
     void testAdd() {
-        assertEquals(11, calculatorService.add(7, 4));
+        assertEquals(12, calculatorService.add(7, 5));
     }
 
     @Test
